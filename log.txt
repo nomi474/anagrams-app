@@ -1,0 +1,100 @@
+2016-10-24T18:38:51.827130+00:00 heroku[api]: Enable Logplex by nomi.sheikh@gmail.com
+2016-10-24T18:38:51.827130+00:00 heroku[api]: Release v2 created by nomi.sheikh@gmail.com
+2016-10-24T18:46:08.970013+00:00 heroku[api]: Set LANG, RACK_ENV config vars by nomi.sheikh@gmail.com
+2016-10-24T18:46:08.970013+00:00 heroku[api]: Release v3 created by nomi.sheikh@gmail.com
+2016-10-24T18:46:09.696838+00:00 heroku[api]: Attach DATABASE (@ref:postgresql-solid-90156) by nomi.sheikh@gmail.com
+2016-10-24T18:46:09.696933+00:00 heroku[api]: Release v4 created by nomi.sheikh@gmail.com
+2016-10-24T18:46:10.296059+00:00 heroku[api]: Scaled to console@0:Free rake@0:Free web@1:Free by nomi.sheikh@gmail.com
+2016-10-24T18:46:10.298456+00:00 heroku[api]: Deploy a33cfc5 by nomi.sheikh@gmail.com
+2016-10-24T18:46:10.298539+00:00 heroku[api]: Release v5 created by nomi.sheikh@gmail.com
+2016-10-24T18:46:10.772015+00:00 heroku[slug-compiler]: Slug compilation started
+2016-10-24T18:46:10.772020+00:00 heroku[slug-compiler]: Slug compilation finished
+2016-10-24T18:46:12.322205+00:00 heroku[web.1]: Starting process with command `bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development}`
+2016-10-24T18:46:15.188280+00:00 app[web.1]: Puma starting in single mode...
+2016-10-24T18:46:15.188297+00:00 app[web.1]: * Version 2.11.0 (ruby 2.2.4-p230), codename: Intrepid Squirrel
+2016-10-24T18:46:15.188298+00:00 app[web.1]: * Min threads: 5, max threads: 5
+2016-10-24T18:46:15.188298+00:00 app[web.1]: * Environment: production
+2016-10-24T18:46:15.847833+00:00 app[web.1]: ! Unable to load application: ActiveRecord::AdapterNotSpecified: database configuration does not specify adapter
+2016-10-24T18:46:15.847856+00:00 app[web.1]: /app/vendor/bundle/ruby/2.2.0/gems/activerecord-4.2.0/lib/active_record/connection_adapters/connection_specification.rb:171:in `spec': database configuration does not specify adapter (ActiveRecord::AdapterNotSpecified)
+2016-10-24T18:46:15.847858+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/activerecord-4.2.0/lib/active_record/connection_handling.rb:50:in `establish_connection'
+2016-10-24T18:46:15.847858+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-activerecord-2.0.5/lib/sinatra/activerecord.rb:43:in `database='
+2016-10-24T18:46:15.847859+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.5/lib/sinatra/base.rb:1208:in `set'
+2016-10-24T18:46:15.847860+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-activerecord-2.0.5/lib/sinatra/activerecord.rb:35:in `database_file='
+2016-10-24T18:46:15.847861+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.5/lib/sinatra/base.rb:1208:in `set'
+2016-10-24T18:46:15.847861+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-activerecord-2.0.5/lib/sinatra/activerecord.rb:20:in `registered'
+2016-10-24T18:46:15.847862+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.5/lib/sinatra/base.rb:1391:in `block in register'
+2016-10-24T18:46:15.847863+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.5/lib/sinatra/base.rb:1389:in `each'
+2016-10-24T18:46:15.847864+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.5/lib/sinatra/base.rb:1389:in `register'
+2016-10-24T18:46:15.847864+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.5/lib/sinatra/base.rb:1970:in `register'
+2016-10-24T18:46:15.847866+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-activerecord-2.0.5/lib/sinatra/activerecord.rb:55:in `<module:Sinatra>'
+2016-10-24T18:46:15.847865+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.5/lib/sinatra/base.rb:2032:in `register'
+2016-10-24T18:46:15.847867+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-activerecord-2.0.5/lib/sinatra/activerecord.rb:10:in `<top (required)>'
+2016-10-24T18:46:15.847869+00:00 app[web.1]: 	from /app/app.rb:8:in `<top (required)>'
+2016-10-24T18:46:15.847868+00:00 app[web.1]: 	from /app/app.rb:8:in `require'
+2016-10-24T18:46:15.847872+00:00 app[web.1]: 	from config.ru:5:in `require'
+2016-10-24T18:46:15.847874+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/builder.rb:55:in `instance_eval'
+2016-10-24T18:46:15.847873+00:00 app[web.1]: 	from config.ru:5:in `block in <main>'
+2016-10-24T18:46:15.847874+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/builder.rb:55:in `initialize'
+2016-10-24T18:46:15.847875+00:00 app[web.1]: 	from config.ru:in `new'
+2016-10-24T18:46:15.847876+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/builder.rb:49:in `eval'
+2016-10-24T18:46:15.847875+00:00 app[web.1]: 	from config.ru:in `<main>'
+2016-10-24T18:46:15.847924+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/builder.rb:49:in `new_from_string'
+2016-10-24T18:46:15.847925+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/builder.rb:40:in `parse_file'
+2016-10-24T18:46:15.847926+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/puma-2.11.0/lib/puma/configuration.rb:107:in `app'
+2016-10-24T18:46:15.847926+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/puma-2.11.0/lib/puma/runner.rb:113:in `load_and_bind'
+2016-10-24T18:46:15.847927+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/puma-2.11.0/lib/puma/single.rb:79:in `run'
+2016-10-24T18:46:15.847928+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/puma-2.11.0/lib/puma/cli.rb:507:in `run'
+2016-10-24T18:46:15.847928+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/puma-2.11.0/bin/puma:10:in `<top (required)>'
+2016-10-24T18:46:15.847932+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/bin/puma:23:in `load'
+2016-10-24T18:46:15.847933+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/bin/puma:23:in `<main>'
+2016-10-24T18:46:15.988110+00:00 heroku[web.1]: State changed from starting to crashed
+2016-10-24T18:46:15.989009+00:00 heroku[web.1]: State changed from crashed to starting
+2016-10-24T18:46:15.971595+00:00 heroku[web.1]: Process exited with status 1
+2016-10-24T18:46:18.149399+00:00 heroku[web.1]: Starting process with command `bundle exec puma -t 5:5 -p ${PORT:-3000} -e ${RACK_ENV:-development}`
+2016-10-24T18:46:21.317835+00:00 app[web.1]: Puma starting in single mode...
+2016-10-24T18:46:21.317862+00:00 app[web.1]: * Version 2.11.0 (ruby 2.2.4-p230), codename: Intrepid Squirrel
+2016-10-24T18:46:21.317863+00:00 app[web.1]: * Min threads: 5, max threads: 5
+2016-10-24T18:46:21.317864+00:00 app[web.1]: * Environment: production
+2016-10-24T18:46:22.063224+00:00 app[web.1]: ! Unable to load application: ActiveRecord::AdapterNotSpecified: database configuration does not specify adapter
+2016-10-24T18:46:22.063255+00:00 app[web.1]: /app/vendor/bundle/ruby/2.2.0/gems/activerecord-4.2.0/lib/active_record/connection_adapters/connection_specification.rb:171:in `spec': database configuration does not specify adapter (ActiveRecord::AdapterNotSpecified)
+2016-10-24T18:46:22.063260+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/activerecord-4.2.0/lib/active_record/connection_handling.rb:50:in `establish_connection'
+2016-10-24T18:46:22.063260+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-activerecord-2.0.5/lib/sinatra/activerecord.rb:43:in `database='
+2016-10-24T18:46:22.063263+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.5/lib/sinatra/base.rb:1208:in `set'
+2016-10-24T18:46:22.063266+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-activerecord-2.0.5/lib/sinatra/activerecord.rb:35:in `database_file='
+2016-10-24T18:46:22.063269+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.5/lib/sinatra/base.rb:1208:in `set'
+2016-10-24T18:46:22.063272+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-activerecord-2.0.5/lib/sinatra/activerecord.rb:20:in `registered'
+2016-10-24T18:46:22.063273+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.5/lib/sinatra/base.rb:1391:in `block in register'
+2016-10-24T18:46:22.063275+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.5/lib/sinatra/base.rb:1389:in `each'
+2016-10-24T18:46:22.063278+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.5/lib/sinatra/base.rb:1389:in `register'
+2016-10-24T18:46:22.063280+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.5/lib/sinatra/base.rb:1970:in `register'
+2016-10-24T18:46:22.063283+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-1.4.5/lib/sinatra/base.rb:2032:in `register'
+2016-10-24T18:46:22.063284+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-activerecord-2.0.5/lib/sinatra/activerecord.rb:55:in `<module:Sinatra>'
+2016-10-24T18:46:22.063300+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/sinatra-activerecord-2.0.5/lib/sinatra/activerecord.rb:10:in `<top (required)>'
+2016-10-24T18:46:22.063301+00:00 app[web.1]: 	from /app/app.rb:8:in `require'
+2016-10-24T18:46:22.063303+00:00 app[web.1]: 	from /app/app.rb:8:in `<top (required)>'
+2016-10-24T18:46:22.063304+00:00 app[web.1]: 	from config.ru:5:in `require'
+2016-10-24T18:46:22.063306+00:00 app[web.1]: 	from config.ru:5:in `block in <main>'
+2016-10-24T18:46:22.063328+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/builder.rb:55:in `instance_eval'
+2016-10-24T18:46:22.063350+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/builder.rb:55:in `initialize'
+2016-10-24T18:46:22.063351+00:00 app[web.1]: 	from config.ru:in `new'
+2016-10-24T18:46:22.063353+00:00 app[web.1]: 	from config.ru:in `<main>'
+2016-10-24T18:46:22.063354+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/builder.rb:49:in `eval'
+2016-10-24T18:46:22.063356+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/builder.rb:49:in `new_from_string'
+2016-10-24T18:46:22.063357+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/rack-1.6.0/lib/rack/builder.rb:40:in `parse_file'
+2016-10-24T18:46:22.063359+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/puma-2.11.0/lib/puma/configuration.rb:107:in `app'
+2016-10-24T18:46:22.063377+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/puma-2.11.0/lib/puma/runner.rb:113:in `load_and_bind'
+2016-10-24T18:46:22.063378+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/puma-2.11.0/lib/puma/single.rb:79:in `run'
+2016-10-24T18:46:22.063381+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/puma-2.11.0/bin/puma:10:in `<top (required)>'
+2016-10-24T18:46:22.063379+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/gems/puma-2.11.0/lib/puma/cli.rb:507:in `run'
+2016-10-24T18:46:22.063384+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/bin/puma:23:in `<main>'
+2016-10-24T18:46:22.063382+00:00 app[web.1]: 	from /app/vendor/bundle/ruby/2.2.0/bin/puma:23:in `load'
+2016-10-24T18:46:22.210030+00:00 heroku[web.1]: State changed from starting to crashed
+2016-10-24T18:46:22.188121+00:00 heroku[web.1]: Process exited with status 1
+2016-10-24T18:46:27.479767+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nomi-anagram-app.herokuapp.com request_id=a05ece8d-e740-46d4-a4b2-567bda98ccd6 fwd="92.98.149.152" dyno= connect= service= status=503 bytes=
+2016-10-24T18:46:28.849333+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nomi-anagram-app.herokuapp.com request_id=eb611ed9-7087-4312-8b32-4f7680a1ffea fwd="92.98.149.152" dyno= connect= service= status=503 bytes=
+2016-10-24T18:47:04.668865+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nomi-anagram-app.herokuapp.com request_id=b6431ceb-15bd-4e26-81e9-ac1cb42c4d6a fwd="92.98.149.152" dyno= connect= service= status=503 bytes=
+2016-10-24T18:47:05.180675+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nomi-anagram-app.herokuapp.com request_id=1fbe8a68-ffea-4a05-85a6-dfadd62dacf6 fwd="92.98.149.152" dyno= connect= service= status=503 bytes=
+2016-10-24T18:57:01.900619+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nomi-anagram-app.herokuapp.com request_id=0ebed3c4-66e6-49d3-9a73-70cd5071a946 fwd="92.98.149.152" dyno= connect= service= status=503 bytes=
+2016-10-24T18:57:02.552158+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nomi-anagram-app.herokuapp.com request_id=46969dde-d40d-4ac3-acf2-e93182b30233 fwd="92.98.149.152" dyno= connect= service= status=503 bytes=
+2016-10-24T18:57:18.169318+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nomi-anagram-app.herokuapp.com request_id=ec57ee56-f513-43a0-8725-8b448bf2d1f0 fwd="92.98.149.152" dyno= connect= service= status=503 bytes=
+2016-10-24T18:57:18.810920+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nomi-anagram-app.herokuapp.com request_id=702d918b-90de-4c0c-a4bb-87035c0c1eb2 fwd="92.98.149.152" dyno= connect= service= status=503 bytes=

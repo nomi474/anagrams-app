@@ -1,0 +1,10 @@
+<h1>Anagrams for <%= "#{@word}" %></h1>
+<ul>
+<% for i in 0..@anagrams.length-1 do %>
+  <li><%= 
+  @anagrams[i]
+  %> 
+  </li>
+<%end %>	
+</ul>  
+<a href = "/">Back to Main Page</a>

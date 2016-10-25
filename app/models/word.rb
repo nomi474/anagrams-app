@@ -1,4 +1,4 @@
-class Word
+class Word < ActiveRecord::Base
  
   def self.find_anagrams(string)
     # Convert word to an array of letters
@@ -18,9 +18,9 @@ class Word
  
       # Create a new word by combining the letter + the reverse of the remaining letters
       # Add new word to anagrams array
-      anagrams << letter + reverse_letters(remaining).join('')
+      anagrams << letter + reverse_letters(remaining).join('')      
     end
- 
+          find_by_text(anagrams)
     # Return anagrams array
     anagrams
   end
@@ -37,4 +37,14 @@ class Word
  
     reversed_letters
   end
+=begin  
+  def self.find_by_text(words_arr)
+    puts words_arr
+    first_letter = ''
+    words_arr.each_with_index do |letter|
+      first_letter = letter[0]
+      puts "first_letter: #{first_letter}"
+    end
+  end
+=end  
 end

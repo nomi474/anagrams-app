@@ -1,13 +1,15 @@
-.caps{
-    color:red;
-}
-.word{
-    font-style:italic
-}
-
-
 body {
-	background:#f8f8f8;
-	background:url('./images/01_anagram-homepage.jpg');
 	font-family:'montserrat', arial;
+	color:#FF1493;
+	text-align: center;
+	background:#f8f8f8;
+	font-size: larger;
+}
+.btn{
+	color:white;
+	background:#f8f8f8;
+	background-color: #FF1493;
+	height: 40px;
+	width: 300px;
+	font-size: larger;
 }

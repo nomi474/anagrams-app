@@ -6,23 +6,28 @@ class Word < ActiveRecord::Base
  
     # Create an array to store our anagrams
     anagrams = []
- 
     # Loop through each letter in letters
     letters.each do |letter|
       # Select the remaining letters
       remaining = letters.select { |l| l != letter }
  
       # Create a new word by combining the letter + the remaining letters
-      # Add new word to anagrams array
-      anagrams << letter + remaining.join('')
+		potential_anagram = letter + remaining.join('')
+		if !Word.find_by_text(potential_anagram).nil?
+		      # Add new word to anagrams array
+			anagrams << potential_anagram
+		end
  
       # Create a new word by combining the letter + the reverse of the remaining letters
       # Add new word to anagrams array
-      anagrams << letter + reverse_letters(remaining).join('')      
+      reverse_anagram = letter + reverse_letters(remaining).join('')   
+	  if !Word.find_by_text(reverse_anagram).nil?
+		      # Add new word to anagrams array
+			anagrams << reverse_anagram
+		end
     end
-          find_by_text(anagrams)
     # Return anagrams array
-    anagrams
+    return anagrams
   end
  
   def self.reverse_letters(letters)
@@ -34,16 +39,6 @@ class Word < ActiveRecord::Base
     letters.each_with_index do |letter, index|
       reversed_letters[length - index - 1] = letter
     end
- 
-    reversed_letters
-  end
-  def self.find_dict_words(words_arr)
-    puts words_arr
-    first_letter = ''
-    words_arr.each_with_index do |letter|
-      first_letter = letter[0]
-      first_letter
-    end
-  end
-find_anagrams("abc")  
+    return reversed_letters
+  end  
 end

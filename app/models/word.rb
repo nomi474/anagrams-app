@@ -1,5 +1,13 @@
 class Word < ActiveRecord::Base
- #validates_presence_of :text
+
+  before_create :add_letters
+  
+  def add_letters
+    characters = self.text.chars
+    alphabetized_characters = characters.sort
+    self.letters =  alphabetized_characters.join
+  end
+  
   def self.find_anagrams(string)
       # Create an array to store our anagrams
       anagrams = []
@@ -39,13 +47,7 @@ class Word < ActiveRecord::Base
       reversed_letters[length - index - 1] = letter
     end
     return reversed_letters
-  end
-  
-  def self.three_letters?(input)
-    if input.length==3
-      return true
-    end
-  end
+  end  
 
   def self.distinct_letters?(input)
    letter_array = input.chars

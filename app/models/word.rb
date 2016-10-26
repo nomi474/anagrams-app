@@ -37,7 +37,8 @@ class Word < ActiveRecord::Base
  
     reversed_letters
   end
-=begin  
+
+=begin
   def self.find_by_text(words_arr)
     puts words_arr
     first_letter = ''
@@ -46,5 +47,6 @@ class Word < ActiveRecord::Base
       puts "first_letter: #{first_letter}"
     end
   end
-=end  
+find_anagrams("abc")  
+=end
 end

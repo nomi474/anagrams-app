@@ -3,12 +3,18 @@ get '/' do
 end
 
 get '/anagrams/:word' do
-  @word = params[:word]
+  @word = params[:word]  
   @anagrams = Word.find_anagrams(@word)
   erb :show
 end
 
 post '/' do
 	@word = params[:word]
-	redirect "/anagrams/#{@word}"
+	begin
+		Word.valid_input(@word)
+		redirect "/anagrams/#{@word}"
+	rescue Exception => error
+		@error = error.message
+		erb :index
+	end
 end

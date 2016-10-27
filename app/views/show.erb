@@ -1,7 +1,9 @@
 <h1>Anagrams for <%= "#{@word}" %></h1>
 <ul>
-<% for i in 0..@anagrams.length-1 do %>
-  <li><%=  @anagrams[i] %>  </li>
-<%end%>  
+<% if ! @anagrams.nil?
+    for i in 0..@anagrams.length-1 do %>
+  <li><%=  @anagrams[i].text %>  </li>
+<%  end
+  end%>  
 </ul>  
 <a href = "/">Back to Main Page</a>

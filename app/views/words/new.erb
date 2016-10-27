@@ -1,13 +1,6 @@
-<div>
-	<h1>Add a Word</h1>
-	<form action="/words" method="post" class="form">
-		<div>
-		  <label for="word">Enter a word.</label>
-		  <p><input type="text" name="word"></p>
-		  <p><input type="submit" class="btn" value="Add word to dictionary"></p>
-		</div>
-	</form>
-</div>
-<div>
-	<a href="/words">Back to Main Page</a>
-</div>
+<p class="errors">
+	<%= "#{@errors}" %>
+</p>
+
+<h1>Add a New Word</h1>
+  <%= erb :"/words/_form" %>

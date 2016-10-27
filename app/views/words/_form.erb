@@ -1,0 +1,18 @@
+<div class="row">
+<div class="col-md-4">
+<div class="form-group">
+	<form class="<%= word_form_class(@word) %>" id = "<%= word_form_id(@word) %>" action="<%= word_form_action(@word) %>" method="post" >
+		<input type="hidden" name="_method" value="<%= word_form_method(@word) %>" />	
+	<div>
+		<label for="text">Enter a word</label>
+		<input type="text" name="text" value="<%=@word.text%>">
+		<br>
+	</div>
+	<div>
+		<input class="btn btn-default" type="submit">		
+	</div>
+	</form>
+</div>
+<div>
+	<a href="/words">Back to Main Page</a>
+</div>

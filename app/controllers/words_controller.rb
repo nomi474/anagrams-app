@@ -3,6 +3,11 @@ get '/words' do
   erb :"/words/index"
 end
 
+get '/words/new' do
+  @word = Word.new
+  erb :"/words/new"
+end
+
 get '/words/:id' do
   id = params[:id]
   @word = Word.find_by_id(id)
@@ -10,13 +15,7 @@ get '/words/:id' do
   erb :"/words/show"
 end
 
-post '/' do
-	@word = params[:word]
-	begin
-		Word.valid_input(@word)
-		redirect "/anagrams/#{@word}"
-	rescue Exception => error
-		@error = error.message
-		erb :index
-	end
+post '/words' do
+		@word = Word.create(text: params[:word])
+   redirect "/words/#{@word.id}"
 end
